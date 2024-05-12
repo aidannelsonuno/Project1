@@ -205,12 +205,12 @@ class Gui:
         '''
         Handles the math for operations on two numbers, used by the operation function and linked to the = button on the calculator
         '''
-        result = operating_num_2
         try: # Possible errors during runtime: ZeroDivisionError (1/0), ValueError (log(<0), OverflowError (10^1000))
             if self.__num_stored == '': # Error checking in case an error causes __num_stored to be an empty string
                 raise ValueError
             operating_num_1 = float(self.__num_stored)
             operating_num_2 = float(self.__num_shown)
+            result = operating_num_2
             if self.__operator == '+': # Operator chosen based on user's choice
                 result = operating_num_1 + operating_num_2
             elif self.__operator == '-':
